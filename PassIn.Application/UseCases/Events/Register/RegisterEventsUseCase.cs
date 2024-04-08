@@ -26,7 +26,6 @@ namespace PassIn.Application.UseCases.Events.Register
                 throw new ArgumentException("The title is invalid");
             }
 
-
             if (string.IsNullOrWhiteSpace(request.Details))
             {
                 throw new ArgumentException("The details are invalid");
