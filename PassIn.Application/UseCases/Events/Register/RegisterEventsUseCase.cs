@@ -18,17 +18,17 @@ namespace PassIn.Application.UseCases.Events.Register
         {
             if (request.MaximumAttendees <= 0)
             {
-                throw new ArgumentException("Number is invalid");
+                throw new PassInException("Number is invalid");
             }
 
             if (string.IsNullOrWhiteSpace(request.Title))
             {
-                throw new ArgumentException("The title is invalid");
+                throw new PassInException("The title is invalid");
             }
 
             if (string.IsNullOrWhiteSpace(request.Details))
             {
-                throw new ArgumentException("The details are invalid");
+                throw new PassInException("The details are invalid");
             }
         }
     }
