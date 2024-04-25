@@ -23,7 +23,7 @@ namespace PassIn.Api.Controllers
                 useCase.Execute(request);
 
                 return Created();
-            } 
+            }
             catch (ArgumentException ex)
             {
                 return BadRequest(new ResponseErrorJson(ex.Message));
@@ -31,7 +31,7 @@ namespace PassIn.Api.Controllers
             catch
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new ResponseErrorJson("unknown error"));
-            }
+            } 
         }
 
     }
